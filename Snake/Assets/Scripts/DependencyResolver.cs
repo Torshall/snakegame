@@ -22,12 +22,12 @@ public class DependencyResolver
 		instance = this;
 	}
 
-	public static void AddDependecy<T>(T dependecy) where T : IDependecyInterface
+	public static void AddDependency<T>(T dependecy) where T : IDependecyInterface
 	{
 		instance.dependencies.Add(typeof(T), dependecy);
 	}
 
-	public static T GetDependecy<T>() where T : IDependecyInterface
+	public static T GetDependency<T>() where T : IDependecyInterface
 	{
 		if(instance.dependencies.ContainsKey(typeof(T)))
 		{

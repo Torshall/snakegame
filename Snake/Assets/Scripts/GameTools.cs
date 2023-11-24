@@ -5,7 +5,7 @@ public class GameTools : MonoBehaviour, IGameTools
 	void Start()
 	{
 		// We add GameTools to the DependencyResolver so we can create and destroy gameobjects from none MonoBehaviour classes
-		DependencyResolver.AddDependecy(this);
+		DependencyResolver.AddDependency(this);
 	}
 
 	/// <summary>

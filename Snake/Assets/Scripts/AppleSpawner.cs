@@ -47,14 +47,14 @@ public class AppleSpawner
 		int randY = Random.Range(0, GameSettings.BoardHeight);
 
 		//TODO: Apples should be cached and recycled and not be created at runtime
-		var gameObject = DependencyResolver.GetDependecy<GameTools>().CreateGameobject(randX, randY, "Prefabs/Apple");
+		var gameObject = DependencyResolver.GetDependency<GameTools>().CreateGameobject(randX, randY, "Prefabs/Apple");
 		appleList.Add(new Apple(randX, randY, gameObject));
 	}
 
 	private void destroyApple(int index)
 	{
 		//TODO: Apples should be cached and recycled and not be destroyed at runtime
-		DependencyResolver.GetDependecy<GameTools>().DestroyGameobject(appleList[index].gameObject);
+		DependencyResolver.GetDependency<GameTools>().DestroyGameobject(appleList[index].gameObject);
 		appleList.RemoveAt(index);
 	}
 }
